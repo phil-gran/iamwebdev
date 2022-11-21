@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap'); 
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {        /*charateristic ng logo*/
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/*NAVIGATION STYLING*/
+.navbar {
+    position: fixed; /*so that you can use absolute, changed to fixed para d mg adjust lesson nine*/
+    width: 100%;
+    padding: 15px 0;
+    font-family: 'Inter', sans-serif;
+    background: turquoise;
+    z-index: 1; /*ajust layering*/
+}
+
+/*js is sensitive remove space*/
+.navbar.sticky{ 
+    padding: 15px;
+    background: tomato;
+}
+
+
+.navbar .max-width { /*class para mag inline ung logo and menus*/
+    display: flex; /*flexible box*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span{
+    color: blue;
+}
+
+.navbar .logo a span:hover{
+    color: yellow; 
+}
+
+.navbar .logo a:hover {
+    background-color: none;
+    color: red;
+}
+
+.navbar .menu.active{
+    left: 0;
+}
+
+.navbar .menu li{
+    list-style-type: none; /*remove bullets*/
+    display: inline-block; /*block inline with the logo*/
+}
+
+.navbar .menu li a{
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: all 0.5s ease; /*watch ty transition tutorials*/
+}
+
+
+.navbar .menu li a:hover {
+    color: red;
+}
+
+/*menu button*/
+.menu-btn{
+    cursor: pointer;
+}
+
+/*SYTLE FOR HOME SECTION*/
+.home {
+    display: flex;
+    background: url(images/banner.jpg) no-repeat center; /*background position*/
+    height: 100vh;
+    min-height: 100px; 
+    max-height: 720px; /*d sobrang laki ung website*/
+    color: black;
+    background-size: cover; /*panu align picture*/
+    background-attachment: fixed; /*stay bg when scrolling*/
+    font-family: 'Inter', sans-serif;
+    margin-left: 100px;
+    
+}
+
+
+.home .max-width {
+    margin: auto 0 auto 30px; /*text positioning*/
+    padding-top: 200px;
+}
+
+.home .home-content .text-1 {
+    font-size: 18px;
+}
+
+
+.home .home-content .text-2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: -55px;
+    font-style: italic;
+}
+
+
+.home .home-content .text-3 {
+    font-size: 18px;
+}
+
+.home .home-content a { /*modiy learn more button*/
+    display: inline-block;
+    background: tomato;
+    color: white;
+    font-size: 15px;
+    padding: 15px 36px;
+    margin-top: 15px;
+    border-radius: 20px;
+    transition: all 0.5s linear; /*animation*/
+}
+
+.home .home-content a:hover {
+    background-color: red;
+    color: white;
+    
+}
+
+
+/*WEBDESIGN NAVIGATION*/ 
+
+section {
+    padding: 100px 0;
+}
+
+.webdesign {
+    display: flex;
+    background: url(images/banner-5.jpg) no-repeat center; /*background position*/
+    /*height: 100vh;
+    min-height: 100px;
+    max-height: 720px;*/
+    color: black;
+    background-size: cover; /*panu align picture*/
+    background-attachment: fixed; /*stay bg when scrolling*/
+    font-family: 'Inter', sans-serif;
+}
+
+
+.webdesign .title {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 50px;
+}
+
+/*define text to display right & left*/
+.webdesign .webdesign-content { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Notes: 
+.webdesign .webdesign-content .column-left 45%
+.webdesign .webdesign-content .column-right 55%
+=> 100% kya nag allign ung picture at text
+*/
+
+
+.webdesign .webdesign-content .left{
+    width: 45%;
+}
+
+.webdesign .webdesign-content .left img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover; /*fit images*/
+    border-radius: 18px;
+}
+
+.webdesign .webdesign-content .right{
+    width: 55%;
+}
+
+.webdesign .webdesign-content .right .text{
+    margin-bottom: 20px;
+}
+
+.webdesign .webdesign-content .right p {
+    font-size: 20px;
+    text-align: justify; /*allign ung mga letters*/
+}
+
+
+/*STYLE FOR SERVICES SECTION*/
+.services  {
+    display: flex;
+    color: black;
+    background: tomato;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.services .title {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    text-align: center; 
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
+.services .services-content { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*styling nka gawa ng card*/
+.services .services-content .card{ 
+    width: calc(33% - 20px);
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 25px;
+}
+
+.services .services-content .card:hover { 
+    background: pink;
+}
+
+.services .services-content .card .box{ 
+    transition: all 0.3s ease;
+}
+
+.services .services-content .card .box:hover{ 
+    transform: scale(1.05) /*box transition*/
+}
+
+.services .services-content .card img{ 
+    height: 60px;
+    width: 60px;
+}
+
+.services .services-content .card i{ 
+    height: 60px;
+    width: 60px;
+}
+
+.services .services-content .text {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.services .services-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+
+/*STYLE FOR SKILLS SECTION*/
+
+.skills {
+    display: flex;
+    background: url(images/banner-3.jpg) no-repeat center; /*background position*/
+    /*height: 100vh;
+    min-height: 100px;
+    max-height: 720px;*/
+    color: black;
+    background-size: cover; /*panu align picture*/
+    background-attachment: fixed; /*stay bg when scrolling*/
+    font-family: 'Inter', sans-serif;
+
+}
+
+.skills .title {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+}
+
+.skills .skills-content { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* calc browser para sa column*/
+.skills .skills-content .column { 
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.skills .skills-content .left p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.skills .skills-content .left a { 
+    display: inline-block;
+    background: tomato;
+    color: white;
+    font-size: 15px;
+    padding: 15px 36px;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+
+.skills .skills-content .left a:hover {
+    color: white;
+    background: red;
+}
+
+
+.skills .skills-content .right .bar{
+    margin-bottom: 15px;
+}
+
+
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right .info:hover{
+    color: red;
+}
+
+.skills .skills-content .right span{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.skills .skills-content .right .line{
+    height: 10px;
+    width: 100%;
+    background: lightgray;
+    position: relative; /*adjust kung anu meron sa pinka box, relative sa colume*/
+}
+
+.skills .skills-content .right .line::before{ /*put content before the next element*/
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background: red;
+}
+
+.skills-content .right .html::before {
+    width: 95%;
+}
+
+.skills-content .right .css3::before {
+    width: 95%;
+}
+
+.skills-content .right .js::before {
+    width: 95%;
+}
+
+.skills-content .right .php::before {
+    width: 95%;
+}
+
+.skills-content .right .mysql::before {
+    width: 95%;
+}
+
+/*CONTACT US STYLING*/
+
+.contact {
+    display: flex;
+    background: url(images/banner-4.jpg); /*background position*/
+    /*height: 100vh;
+    min-height: 100px; 
+    max-height: 720px;*/
+    background-size: cover; /*panu align picture*/
+    background-attachment: scroll; /*stay bg when scrolling*/
+    font-family: 'Inter', sans-serif;
+}
+
+.contact .title {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 50px;
+}
+
+.contact .contact-content { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+
+.contact .contact-content .column .text{
+    color: red;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.contact .contact-content .left p{ 
+    font-size: 18px;
+    text-align: justify;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+}
+
+
+.contact .contact-content .left img{
+    height: 20px;
+    width: 20px;
+}
+
+
+.contact .contact-content .info .head {
+    color: red;
+    font-weight: 700;
+    padding: 5px 0;
+}
+
+.contact .contact-content .info .sub-title {
+    font-weight: 500;
+}
+
+
+.contact .right form .fields{
+    display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.contact .right form .textarea {
+    height: 80px;  
+    width: 100%;
+}
+
+
+.contact .right form .name {
+    margin-right: 10px;
+}
+
+
+.contact .right form .email {
+    margin-left: 10px;
+   
+}
+
+
+.contact .right form .field input {
+    height: 50px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline:  none;
+    padding: 0 15px;
+}
+
+.contact .right form .textarea textarea{
+    height: 90px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    outline:  none;
+    padding: 0 15px;
+    resize: none;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
+    border-color: red;
+}
+
+.contact .right form .button {
+    height: 50px;
+    width: 150px;
+}
+
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    background: tomato;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 2px solid tomato;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.contact .right form .button button:hover{
+    background: red;
+    color: white;
+}
+
+/*FOOTER STYLING*/
+
+footer {
+    font-family:'intel', sans-serif;
+    color: white;
+    background: black;
+    text-align: center;
+    padding: 30px 25px;
+}
+
+footer span a {
+    color: red;
+    text-decoration: none;
+    font-size: large;
+}
+
+footer span a:hover {
+    color: yellow;
+    text-decoration: line;
+}
+
+/*Responsive Meidia  Query*/
+@media (max-width: 1920px) {
+    .home .max-width {
+        margin-left: 5px;
+    }
+
+    .menu-btn {
+        display: none;
+        z-index: 999;
+    }
+    
+}
+
+@media (max-width: 1104px) {
+    .webdesign .webdesign-content .left img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .menu-btn {
+        display: none;
+        z-index: 999;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: none;
+        z-index: 999;
+    }
+}
+
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 70vh;
+        width: 100%;
+        left: -100%; /*0 to -100%, d mg display ung tiles at burger lng mg show*/
+        top: 0;
+        background: black;
+        opacity: 90%;
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 25px;
+    }
+
+    .home .home-content a {
+        font-size: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .webdesign .webdesign-content .column {
+        width: 100%;
+
+    }
+
+    .webdesign .webdesign-content .column-left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .webdesign .webdesign-content .column-right {
+       flex: 100%;
+        
+    }
+
+    .services .services-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 35px;
+    }
+
+    
+    .skills .skills-content .column, 
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+}
+
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .services .services-content .card { /*para mg 100% responsiveness*/
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0
+    }
+}
+     
